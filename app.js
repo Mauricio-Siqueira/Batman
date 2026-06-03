@@ -27,13 +27,23 @@ campoPesquisa = campoPesquisa.toLowerCase()
     for (let dado of dados) {
       titulo = dado.titulo.toLowerCase()
       descricao = dado.descricao.toLowerCase()
+      let genero = dado.genero.toLowerCase();
+      let diretor = dado.diretor.toLowerCase();
+      let elenco = dado.elenco.toLowerCase();
+      let ano = dado.ano.toLowerCase();
       // Se titulo includes campoPesquisa
-      if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa)){
+      if (titulo.includes(campoPesquisa) || 
+          descricao.includes(campoPesquisa) ||
+          genero.includes(campoPesquisa) ||
+          diretor.includes(campoPesquisa) ||
+          elenco.includes(campoPesquisa)||
+          ano.includes(campoPesquisa))
+          {
         // Cria um novo elemento
         resultados += `
         <div class="item-resultado">
           <h2>
-            <a href="#" target="_blank">${dado.titulo}</a>
+            <a href="${dado.link}" target="_blank">${dado.titulo}</a>
           </h2>
           <p class="descricao-meta">${dado.descricao}</p>
           <p> Ano de lançamento ${dado.ano}</p>
@@ -51,4 +61,14 @@ campoPesquisa = campoPesquisa.toLowerCase()
     }
     // Atribui o HTML gerado para o conteúdo da seção
     section.innerHTML = resultados;
-  }
+}
+
+// Faz a pesquisa quando o botão for clicado
+document.getElementById("botao-pesquisa").addEventListener("click", pesquisar);
+
+// Faz a pesquisa quando o usuário pressionar "Enter" dentro do campo de input
+document.getElementById("campo-pesquisa").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        pesquisar();
+    }
+});
