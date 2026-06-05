@@ -7,12 +7,12 @@ let campoPesquisa = document.getElementById
 
 // Se campoPesquisa for uma String sem nada
 if (campoPesquisa == "") {
-  section.innerHTML = "<p>Nada foi encontrado. Sem informações em busca</p>"  
+  section.innerHTML = "<p class=\"mensagem-sem-resultados\">Nada foi encontrado. Sem informações em busca</p>"  
   return   
 }
 
 if (campoPesquisa == " ") {
-  section.innerHTML = "<p>Nada foi encontrado. Sem informações em busca</p>"  
+  section.innerHTML = "<p class=\"mensagem-sem-resultados\">Nada foi encontrado. Sem informações em busca</p>"  
   return   
 }
 
@@ -42,7 +42,9 @@ campoPesquisa = campoPesquisa.toLowerCase()
         // Cria um novo elemento
         resultados += `
         <div class="item-resultado">
-          <h2>
+        <img src="${dado.imagem}" alt="Pôster de ${dado.titulo}" class="poster-filme">
+        <div class="info-filme">  
+        <h2>
             <a href="${dado.link}" target="_blank">${dado.titulo}</a>
           </h2>
           <p class="descricao-meta">${dado.descricao}</p>
@@ -50,14 +52,18 @@ campoPesquisa = campoPesquisa.toLowerCase()
           <p> Diretor: ${dado.diretor}</p>
           <p> Elenco: ${dado.elenco}</p>
           <p> Genero: ${dado.genero}</p>
-          <a href=${dado.link} target="_blank">Mais informações sobre o filme</a>
+            <div class="links-card">
+              <a href="${dado.link}" target="_blank" class="link-mais-info">Mais informações</a>
+              <a href="${dado.trailer}" target="_blank" class="botao-trailer">▶ Assistir Trailer</a>
+            </div>
+          </div>
         </div>
       `;
       }
     }
 
     if (!resultados) {
-        resultados = "<p>Nada Foi encontrado</p>"
+        resultados = "<p class=\"mensagem-sem-resultados\">Nada foi encontrado. Certifique-se de que o campo de pesquisa está preenchido corretamente</p>"
     }
     // Atribui o HTML gerado para o conteúdo da seção
     section.innerHTML = resultados;

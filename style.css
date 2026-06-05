@@ -4,8 +4,9 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #ffffff; /* Cor de fundo da página */
-    background-image: url(Batman.jpg);
+    background-color: #0d0d11; /* Cor de fundo da página */
+    background-image: url(imagens/Batman.jpg);
+    background-attachment: fixed;
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -38,7 +39,7 @@ section input {
     padding: 1rem; /* Espaçamento interno */
     border-radius: 1.5rem; /* Borda arredondada */
     margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-    color: #161313; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     font-size: 1rem; /* Tamanho da fonte */
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
@@ -48,7 +49,7 @@ section button {
     padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #000000; /* Cor de fundo do botão */
+    background-color: #363434; /* Cor de fundo do botão */
     color: #ffffff; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
@@ -56,7 +57,7 @@ section button {
 
 /* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-    background-color: #2e0505; /* Muda a cor de fundo ao passar o mouse */
+    background-color: #4e4d4d; /* Muda a cor de fundo ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
 
@@ -72,12 +73,18 @@ section button:hover {
 
 /* Estiliza cada item de resultado */
 .item-resultado {
-    background: #7e7b7b; /* Cor de fundo dos itens */
-    border-radius: 0.6rem; /* Borda arredondada */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    box-shadow: 0 2px 4px rgba(248, 245, 245, 0.1); /* Sombra leve */
+    display: flex;/* Alinha os itens em linha (imagem ao lado do texto) */
+    gap: 1.5rem;/*Espaço entre a imagem e as informações */
+    background: rgba(20, 20, 25, 0.85); /* Cor de fundo dos itens */
+    backdrop-filter: blur(8px); /*efeito de "vidro fosco*/
+    border: 1px solid rgba(255, 255, 255, 0.1); /*borda fina*/
+    border-radius: 0.8rem; /* Borda arredondada */
+    padding: 1.5rem; /* Espaçamento interno */
+    margin-bottom: 1.2rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra leve */
+    gap: 1.5rem;
 }
+
 
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
@@ -88,18 +95,89 @@ section button:hover {
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #000000; /* Cor do texto dos links */
+    color: #ffe600; /* Amarelo clássico para os links */
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-/* Estiliza os links quando são passados o mouse sobre */
+/* Estiliza os links quando são passados o mouse */
 .item-resultado a:hover {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #ffffff; /* Fica branco ao passar o mouse */
+    text-shadow: 0 0 8px rgba(255, 230, 0, 0.6); /* Brilho de neon suave */
 }
 
 /* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
-    color: #000000; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem acima e abaixo */
+    color: #d1d1d6; /* Cor do texto */
+    margin: 0.8rem 0; /* Margem acima e abaixo */
+}
+
+/* Estiliza todos os parágrafos dentro de um card de resultado */
+.item-resultado p {
+    color: #a1a1a6; /* Um cinza claro  para leitura */
+    font-size: 0.95rem; /* Tamanho da fonte menor */
+    margin: 0.8rem 0; /* Espaço  entre as linhas */
+    line-height: 1.5; /* Espaçamento entre linhas de texto */
+}
+
+/* imagem e o texto fiquem lado a lado no card */
+.item-resultado {
+    display: flex;      /* imagem e texto lado a lado */
+    flex-wrap: wrap;    /* Tela pequena, texto para baixo */
+    gap: 1.5rem;        /* Espaço entre a imagem e as informações */
+}
+
+/* Estiliza o pôster do filme */
+.poster-filme {
+    width: 120px;       /* Largura fixa do pôster */
+    height: 180px;      /* Altura do pôster */
+    object-fit: cover;  /* Preencher o espaço sem distorcer */
+    border-radius: 0.5rem; /* foto arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra sob a imagem */
+}
+
+.info-filme {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estiliza a mensagem de erro/resultados não encontrados */
+.mensagem-sem-resultados {
+    color: #be1c1c; /* Amarelo clássico para destacar o alerta */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.2rem; /* Tamanho confortável */
+    margin-top: 2rem; /* Afasta um pouco do topo */
+    font-weight: 500;
+}
+
+/* alinhar os links lado a lado */
+.links-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espaço entre os dois links */
+    margin-top: 1rem;
+}
+
+/* Estiliza o botão do trailer */
+.botao-trailer {
+    background-color: #e50914; /* Vermelho estilo Netflix/Youtube */
+    color: #ffffff !important; /* Texto branco */
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no botão do trailer */
+.botao-trailer:hover {
+    background-color: #b80710; /* Vermelho mais escuro no hover */
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.5); /* Brilho neon vermelho */
+    transform: scale(1.05); /* Aumenta o botão ligeiramente */
+    text-decoration: none !important;
 }
 
 /* Estiliza o rodapé da página */
@@ -149,6 +227,7 @@ footer {
 
     section button {
         padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+        transition: all 0.3s ease; /* Suavizar a animação do hover */
         font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
     }
 
@@ -161,7 +240,7 @@ footer {
         font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
     }
 
-    footer {
+    footer { 
         font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
     }
 }
