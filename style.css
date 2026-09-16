@@ -29,45 +29,61 @@ section {
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
     margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    width: 100%; /* Garente que a seção tem 100% de largura para trabalhar */
 }
 
 /* Estiliza os inputs dentro das seções */
 section input {
-    width: 30rem; /* Largura dos inputs */
-    border: none; /* Remove a borda padrão */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 1.5rem; /* Borda arredondada */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-    color: #000000; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+    width: 90%;
+    max-width: 30rem;
+    background-color: rgba(20, 20, 25, 0.8); /* Fundo escuro translúcido */
+    border: 2px solid rgba(255, 255, 255, 0.15); /* Bordinha cinza suave */
+    padding: 1rem 1.4rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Letras brancas para ler no fundo escuro */
+    font-size: 1.05rem;
+    outline: none; /* Remove aquela linha azul feia padrão do navegador */
+    transition: all 0.3s ease; /* Faz qualquer mudança acontecer de forma suave */
+    box-sizing: border-box;
+}
+/* O que acontece quando você clica dentro do campo para digitar */
+section input:focus {
+    border-color: #ffe600c8; /* A borda acende no amarelo Batman */
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.4); /* Cria um feixe de luz neon ao redor */
 }
 
-/* Estiliza os botões dentro das seções */
+* Estiliza o botão de pesquisar */
 section button {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
-    border: none; /* Remove a borda padrão */
-    border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #363434; /* Cor de fundo do botão */
-    color: #ffffff; /* Cor do texto do botão */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    padding: 0.8rem 2.2rem; /* Um botão mais largo e imponente */
+    border: none;
+    border-radius: 2rem;
+    background-color: #ffe600b9; /* Amarelo clássico do Batman */
+    color: #000000; /* Texto em preto bem legível */
+    font-weight: 700; /* Letras em negrito (mais grossas) */
+    font-size: 1rem;
+    letter-spacing: 0.05rem; /* Um pequeno espaçamento elegante entre as letras */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Garante que a animação não seja seca */
 }
 
-/* Adiciona efeito hover ao botão de pesquisa */
+/* Efeito ao passar o mouse por cima do botão */
 section button:hover {
-    background-color: #4e4d4d; /* Muda a cor de fundo ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+    background-color: #fff066b8; /* Amarelo fica ainda mais claro e brilhante */
+    transform: scale(1.06); /* O botão cresce 6% de tamanho suavemente */
+    box-shadow: 0 0 20px rgba(255, 230, 0, 0.6); /* Brilho neon amarelo potente */
 }
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
-    width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
+    width: 95%; /* Largura máxima da caixa de resultados */
+    max-width: 60rem; /* Trava no tamanho maximo do pc*/
+    height: 60vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
+    box-sizing: border-box; /* Gatante o que o pagging não estufe a caixa */
 }
 
 /* Estiliza cada item de resultado */
