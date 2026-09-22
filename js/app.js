@@ -1,7 +1,7 @@
 function pesquisar() {
     // Obtém a seção onde os resultados serão exibidos
     let section = document.getElementById("resultados-pesquisa");
-   
+  
 let campoPesquisa = document.getElementById
 ("campo-pesquisa").value
 

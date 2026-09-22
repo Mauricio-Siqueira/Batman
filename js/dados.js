@@ -1,4 +1,4 @@
-let dados = [
+const dados = [
     {
         titulo : "Batman Begins",
         descricao : "um jovem abalado pela trágica morte de seus pais. Em busca de justiça e vingança, ele embarca em uma jornada épica pelo mundo, onde se submete a um rigoroso treinamento físico e mental. Ao retornar à sua cidade natal, Gotham City, um lugar corrompido pela criminalidade",
