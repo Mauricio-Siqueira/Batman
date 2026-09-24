@@ -37,5 +37,5 @@ Aplicação web interativa para consulta e exploração de filmes do universo do
 ## 👨‍💻 Autor
 
 Desenvolvido por **Mauricio Rego Siqueira**  
-- LinkedIn: [linkedin.com/in/mauricio-siqueira-dev](https://www.linkedin.com/in/mauricio-siqueira-dev)  
+- LinkedIn: [linkedin.com/in/mauricio-siqueira-dev](https://www.linkedin.com/in/maur%C3%ADcio-siqueira-dev/)  
 - GitHub: [github.com/Mauricio-Siqueira](https://github.com/Mauricio-Siqueira)
