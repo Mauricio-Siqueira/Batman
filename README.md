@@ -25,3 +25,17 @@ Aplicação web interativa para consulta e exploração de filmes do universo do
 1. Clone este repositório:
    ```bash
    git clone https://github.com/Mauricio-Siqueira/Batman.git
+   ```
+2. Acesse a pasta do projeto:
+   ```bash
+   cd Batman
+   ```
+3. Abra o arquivo `index.html` em qualquer navegador web.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Mauricio Rego Siqueira**  
+- LinkedIn: [linkedin.com/in/mauricio-siqueira-dev](https://www.linkedin.com/in/mauricio-siqueira-dev)  
+- GitHub: [github.com/Mauricio-Siqueira](https://github.com/Mauricio-Siqueira)

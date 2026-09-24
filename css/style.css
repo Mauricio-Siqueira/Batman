@@ -197,13 +197,28 @@ section button:hover {
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #000000; /* Cor de fundo do rodapé */
-    color: #ffffff; /* Cor do texto */
+    background-color: rgba(10, 10, 15, 0.95); /* Fundo escuro elegante */
+    color: #a0a0a5; /* Texto cinza suave */
     text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
+    padding: 1.2rem 1rem; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
     margin-top: auto; /* Margem no topo que se regula */
-    font-size: 1rem; /* Tamanho da fonte */
+    font-size: 0.95rem; /* Tamanho da fonte */
+    border-top: 1px solid rgba(255, 230, 0, 0.2); /* Linha sutil no amarelo Batman */
+    box-sizing: border-box;
+}
+
+footer a {
+    color: #ffe600; /* Amarelo Batman para os links */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 230, 0, 0.8);
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
