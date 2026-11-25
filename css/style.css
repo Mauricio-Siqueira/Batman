@@ -221,6 +221,99 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* Cortina */
+.modal-container {
+    position: fixed; /* Fica travada na tela, não se mexe com rolagem */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% da largura da tela */
+    height: 100vh; /* 100% da altura da tela */
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo preto 85% transparente */
+    backdrop-filter: blur(8px); /* Desfoca tudo o fundo */
+    display: flex; /* Centraliza a janela no meio da tela */
+    justify-content: center; /* Centraliza na horizontal */
+    align-items: center; /* Centraliza na vertical */
+    z-index: 9999; /* Garante que ela fique por cima de tudo */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* A CAPA DA INVISIBILIDADE */
+.modal-container.escondido {
+    display: none; /* Quando tiver essa classe, o modal simplesmente não aparece na tela */
+}
+
+/* A CAIXA CENTRAL */
+.modal-conteudo {
+    background: #141419; /* Cinza bem escuro quase preto */
+    border: 2px solid #ffe600; /* Borda amarela do Batman */
+    border-radius: 1rem; /* Bordas arredondadas */
+    width: 95%;
+    max-width: 750px; /* Largura máxima */
+    max-height: 85vh; /* não ultrapassa a altura da tela */
+    overflow-y: auto; /* barra de rolagem interna */
+    position: relative; /* referência para o botão de fechar */
+    padding: 2rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 230, 0, 0.25); /* Sombra + Brilho amarelo */
+    box-sizing: border-box;
+}
+
+/*O BOTÃO DE FECHAR*/
+.botao-fechar {
+    position: absolute;
+    top: 0.8rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.botao-fechar:hover {
+    color: #ffe600; /* Fica amarelo quando passa o mouse */
+    transform: scale(1.2); /* Aumenta o tamanho */
+}
+
+/* ORGANIZAÇÃO DOS DADOS DENTRO DO MODAL */
+.modal-detalhes-grid {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Em celulares, a foto fica em cima e o texto embaixo */
+}
+
+.modal-poster {
+    width: 200px;
+    border-radius: 0.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.modal-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.modal-info h2 {
+    color: #ffe600;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.modal-info p {
+    color: #d1d1d6;
+    line-height: 1.6;
+    margin: 0.6rem 0;
+    font-size: 0.95rem;
+}
+
+.modal-info strong {
+    color: #ffffff;
+}
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem; /* Tamanho da fonte em telas menores */
