@@ -1,6 +1,6 @@
 # 🦇 Batman - Catálogo e Busca de Filmes
 
-Acesse o projeto online:** [Clique aqui para visualizar](https://mauricio-siqueira.github.io/Batman/)
+Acesse o projeto online: [Clique aqui para visualizar](https://mauricio-siqueira.github.io/Batman/)
 
 Aplicação web interativa para consulta e exploração de filmes do universo do Batman, desenvolvida com foco em prática de fundamentos de desenvolvimento front-end e manipulação de DOM.
 
